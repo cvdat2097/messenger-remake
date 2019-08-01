@@ -1,0 +1,52 @@
+@import url(./layout-mobile.css);
+
+.container {
+    height: 100%;
+    box-sizing: border-box;
+
+    min-width: 600px;
+}
+
+.chats-container {
+    border: 2px solid green;
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+
+    min-width: 285px;
+    max-width: 360px;
+    width: 30%;
+}
+
+.conversation-container {
+    border: 2px solid orange;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    height: 100%;
+}
+
+.messenger-header-container {
+    border: 2px solid blue;
+    box-sizing: border-box;
+    height: 7%;
+}
+
+.messenger-container {
+    border: 2px solid plum;
+    box-sizing: border-box;
+
+    overflow: hidden;
+    height: 93%;
+}
+
+.menu-container {
+    border: 2px solid greenyellow;
+    box-sizing: border-box;
+
+    float: right;
+    height: 93%;
+    max-width: 300px;
+    width: 35%;
+    min-width: 220px;
+}

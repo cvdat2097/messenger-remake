@@ -1,0 +1,6 @@
+@media screen and (max-width: 600px) {
+    .chats-container {
+        width: 80px !important;
+        min-width: initial !important;
+    }
+}
