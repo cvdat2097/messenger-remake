@@ -18,6 +18,37 @@
     width: 30%;
 }
 
+.chats-header {
+    border: 2px solid royalblue;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.chats {
+    border: 2px solid indianred;
+    height: calc(100% - 60px);
+    box-sizing: border-box;
+
+    overflow-y: scroll;
+}
+
+.search-box {
+    border: 2px solid lawngreen;
+    box-sizing: border-box;
+}
+
+.conversations {
+    border: 2px solid navy;
+    box-sizing: border-box;
+    display: block;
+}
+
+.search-result {
+    border: 2px solid violet;
+    box-sizing: border-box;
+    display: none;
+}
+
 .conversation-container {
     border: 2px solid orange;
     box-sizing: border-box;
@@ -30,7 +61,35 @@
 .messenger-header-container {
     border: 2px solid blue;
     box-sizing: border-box;
-    height: 7%;
+    height: 60px;
+}
+
+.menu-container {
+    border: 2px solid greenyellow;
+    box-sizing: border-box;
+
+    float: right;
+    height: calc(100% - 60px);
+    max-width: 300px;
+    width: 35%;
+    min-width: 220px;
+}
+
+.menu-container .conversation-avatar {
+    border: 2px solid orange;
+    height: 200px;
+}
+
+.menu-container .dropdown-menu {
+    border: 2px solid lightblue;
+}
+
+.menu-container .dropdown-menu .dropdown-toggle {
+    border: 2px solid coral;
+}
+
+.menu-container .dropdown-menu .dropdown-items {
+    border: 2px solid cadetblue;
 }
 
 .messenger-container {
@@ -39,16 +98,14 @@
 
     /* Create Block Formating Context */
     overflow: auto;
-    height: 93%;
+    height: calc(100% - 60px - 52px);
 }
 
-.menu-container {
-    border: 2px solid greenyellow;
+.message-input {
+    border: 2px solid red;
     box-sizing: border-box;
+    height: 52px;
 
-    float: right;
-    height: 93%;
-    max-width: 300px;
-    width: 35%;
-    min-width: 220px;
+    /* Create Block Formating Context */
+    overflow: auto;
 }

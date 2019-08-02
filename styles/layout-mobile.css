@@ -3,4 +3,8 @@
         width: 80px !important;
         min-width: initial !important;
     }
+
+    .chats {
+        overflow-x: hidden;
+    }
 }
