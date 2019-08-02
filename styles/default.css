@@ -5,3 +5,76 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
+/* HELPER CLASSES */
+.rounded {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* BUTTONS */
+
+.btn {
+    border: none;
+    text-align: center;
+    background-color: whitesmoke;
+    user-select: none;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px cadetblue;
+}
+.btn:active {
+    outline: none;
+    opacity: 0.4;
+}
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn * {
+    font-size: 1.7em;
+}
+
+/* POPOVER */
+.popover {
+    position: relative;
+}
+
+.popover-triangle {
+    /* display: none; */
+    position: absolute;
+    top: -15px;
+    left: 8%;
+    z-index: 2;
+
+    border: 8px solid transparent;
+    border-bottom-color: white;
+}
+
+.popover-triangle-backdrop {
+    display: none;
+    position: absolute;
+    top: -16px;
+    left: 8%;
+    z-index: 1;
+
+    border: 8px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.popover-body {
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 140%;
+    left: 0;
+    z-index: 2;
+    padding: 10px;
+
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 0 5px gray;
+}

@@ -14,13 +14,59 @@
         <link rel="stylesheet" href="./styles/default.css" />
         <link rel="stylesheet" href="./styles/layout.css" />
         <link rel="stylesheet" href="./styles/style.css" />
+
+        <!-- FONT & ICONS -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
     </head>
     <body>
         <div class="container">
             <!-- CHATS SECTION START -->
             <section class="chats-container">
                 <div class="chats-header">
-                    CHATS-HEADER
+                    <div class="banner">
+                        <div class="account-avatar rounded">
+                            <img
+                                src="./assets/img/account-avatar.png"
+                                alt="Account Avatar"
+                            />
+                        </div>
+                        <h1>Chats</h1>
+                    </div>
+                    <div class="header-buttons">
+                        <div
+                            class="popover"
+                            popover-body-id="account-settings-popover"
+                        >
+                            <div
+                                id="account-settings-popover"
+                                class="popover-body"
+                            >
+                                hihihi
+                            </div>
+                            <button
+                                id="account-settings-button"
+                                class="btn rounded"
+                                title="Settings, help and more"
+                            >
+                                <i class="material-icons">
+                                    settings
+                                </i>
+                            </button>
+                        </div>
+
+                        <button
+                            id="new-conversation-button"
+                            class="btn rounded"
+                            title="New Message"
+                        >
+                            <i class="material-icons">
+                                create
+                            </i>
+                        </button>
+                    </div>
                 </div>
                 <div class="chats-finder">
                     <div class="search-box">
@@ -76,5 +122,6 @@
 
         <!-- JS SCRIPTS -->
         <script src="./js/main.js"></script>
+        <script src="./js/popover.js"></script>
     </body>
 </html>
