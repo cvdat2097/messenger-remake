@@ -21,7 +21,8 @@
 .conversation-container {
     border: 2px solid orange;
     box-sizing: border-box;
-    overflow: hidden;
+    /* Create Block Formating Context */
+    overflow: auto;
 
     height: 100%;
 }
@@ -36,7 +37,8 @@
     border: 2px solid plum;
     box-sizing: border-box;
 
-    overflow: hidden;
+    /* Create Block Formating Context */
+    overflow: auto;
     height: 93%;
 }
 
