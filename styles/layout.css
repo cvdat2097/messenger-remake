@@ -24,7 +24,7 @@
     box-sizing: border-box;
 }
 
-.chats {
+.chats-finder {
     border: 2px solid indianred;
     height: calc(100% - 60px);
     box-sizing: border-box;
@@ -37,7 +37,7 @@
     box-sizing: border-box;
 }
 
-.conversations {
+.chats {
     border: 2px solid navy;
     box-sizing: border-box;
     display: block;
@@ -49,7 +49,7 @@
     display: none;
 }
 
-.conversation-container {
+.messenger-container {
     border: 2px solid orange;
     box-sizing: border-box;
     /* Create Block Formating Context */
@@ -92,7 +92,7 @@
     border: 2px solid cadetblue;
 }
 
-.messenger-container {
+.conversation-container {
     border: 2px solid plum;
     box-sizing: border-box;
 
@@ -101,7 +101,7 @@
     height: calc(100% - 60px - 52px);
 }
 
-.message-input {
+.messager-input {
     border: 2px solid red;
     box-sizing: border-box;
     height: 52px;
