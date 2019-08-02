@@ -89,7 +89,6 @@ ul.menu {
     list-style: none;
     cursor: pointer;
     white-space: nowrap;
-
 }
 
 li.menu-item {
@@ -109,4 +108,21 @@ li.menu-separator {
     margin: 5px 0;
     padding: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.075);
+}
+
+/* INPUT */
+.text-input {
+    width: 100%;
+    background: whitesmoke;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+
+    font-size: 1em;
+}
+
+.text-input::placeholder {
+    color: silver;
+    font-weight: 100;
 }

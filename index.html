@@ -134,8 +134,20 @@
                 </div>
                 <div class="chats-finder">
                     <div class="search-box">
-                        SEARCH-BOX
-                        <input type="text " placeholder="Search Messenger" />
+                        <div class="input-container">
+                            <input
+                                id="chat-search-input"
+                                type="text"
+                                class="text-input"
+                                placeholder="Search Messenger"
+                            />
+                            <span id="clear-input-button"></span>
+                        </div>
+
+                        <div id="search-message-button">
+                            Search messages for
+                            <span id="search-keyword-container"></span>
+                        </div>
                     </div>
 
                     <div class="chats">
