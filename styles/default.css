@@ -43,7 +43,6 @@ body {
 }
 
 .popover-triangle {
-    /* display: none; */
     position: absolute;
     top: -15px;
     left: 8%;
@@ -54,7 +53,6 @@ body {
 }
 
 .popover-triangle-backdrop {
-    display: none;
     position: absolute;
     top: -16px;
     left: 8%;

@@ -6,7 +6,9 @@ const closeAllPopoverBodies = () => {
     }
 };
 
-const togglePopoverBody = (event, popoverBody) => {
+const togglePopoverBody = (event, popoverBodyId) => {
+    const popoverBody = document.getElementById(popoverBodyId);
+
     if (popoverBody) {
         if (
             !popoverBody.style.display ||
@@ -21,16 +23,19 @@ const togglePopoverBody = (event, popoverBody) => {
     event.stopPropagation();
 };
 
-const createPopoverTriangle = (popover, popoverBody, triangleClassName) => {
+const createPopoverTriangle = (popover, popoverBodyId, triangleClassName) => {
     // Create triangle
+    const popoverBody = document.getElementById(popoverBodyId);
+
     if (popoverBody) {
         const popoverTriangle = document.createElement('div');
 
         popoverTriangle.setAttribute('class', triangleClassName);
         popoverBody.appendChild(popoverTriangle);
 
+
         popoverTriangle.style.left =
-            popover.offsetWidth / 2 - popoverTriangle.offsetWidth / 2;
+            popover.offsetWidth / 2 - 8;
     }
 };
 
@@ -41,14 +46,14 @@ for (const popover of popovers) {
 
     if (popoverBody) {
         popover.addEventListener('click', e =>
-            togglePopoverBody(e, popoverBody)
+            togglePopoverBody(e, popoverBodyId)
         );
         popoverBody.addEventListener('click', e => e.stopPropagation());
 
-        createPopoverTriangle(popover, popoverBody, 'popover-triangle');
+        createPopoverTriangle(popover, popoverBodyId, 'popover-triangle');
         createPopoverTriangle(
             popover,
-            popoverBody,
+            popoverBodyId,
             'popover-triangle-backdrop'
         );
     }
