@@ -193,9 +193,17 @@
     z-index: -1;
 }
 
-.chat-property .chat-seen img {
+.chat-property .chat-seen {
     width: 85%;
     height: 85%;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.chat-property .chat-seen img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
