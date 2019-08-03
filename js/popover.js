@@ -6,7 +6,9 @@ const closeAllPopoverBodies = () => {
     }
 };
 
-const togglePopoverBody = popoverBodyId => {
+const togglePopoverBody = (event, popoverBodyId) => {
+    event.stopPropagation();
+
     const popoverBody = document.getElementById(popoverBodyId);
 
     if (popoverBody) {
@@ -16,6 +18,12 @@ const togglePopoverBody = popoverBodyId => {
         ) {
             closeAllPopoverBodies();
             popoverBody.style.display = 'block';
+
+            if (popoverBody.getAttribute('use-mouse-position') === 'true') {
+                popoverBody.style.position = 'fixed';
+                popoverBody.style.left = event.pageX - 10;
+                popoverBody.style.top = event.pageY + 15;
+            }
         } else {
             popoverBody.style.display = 'none';
         }
@@ -43,8 +51,7 @@ for (const popover of popovers) {
 
     if (popoverBody) {
         popover.addEventListener('click', e => {
-            e.stopPropagation();
-            togglePopoverBody(popoverBodyId);
+            togglePopoverBody(e, popoverBodyId);
         });
 
         createPopoverTriangle(popover, popoverBodyId, 'popover-triangle');
@@ -57,3 +64,4 @@ for (const popover of popovers) {
 }
 
 document.body.addEventListener('click', closeAllPopoverBodies);
+document.body.addEventListener('wheel', closeAllPopoverBodies);
