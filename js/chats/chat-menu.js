@@ -1,13 +1,43 @@
-let activeChatMenu = null;
-let inactiveChatStates = [];
+let activedChatMenu = [];
+let inactivedChatStates = [];
 
-const closeAllChatPropeties = () => {
-    activeChatMenu.className = activeChatMenu.className.replace(
-        /\schat-menu-active/g,
-        ''
-    );
+const deactiveAllChatMenus = () => {
+    if (activedChatMenu.length && inactivedChatStates.length) {
+        activedChatMenu.forEach(chatMenu => {
+            chatMenu.className = chatMenu.className.replace(
+                /\schat-menu-active/g,
+                ''
+            );
+        });
 
-    for (const state of inactiveChatStates) {
+        inactivedChatStates.forEach(inactivedChatState => {
+            for (const state of inactivedChatState) {
+                state.className = state.className.replace(
+                    /\schat-state-inactive/g,
+                    ''
+                );
+            }
+        });
+
+        activedChatMenu = [];
+        inactivedChatStates = [];
+    }
+};
+
+const activeChatMenu = (chatMenu, chatStates) => {
+    chatMenu.className += ' chat-menu-active';
+    activedChatMenu.push(chatMenu);
+
+    for (const state of chatStates) {
+        state.className += ' chat-state-inactive';
+    }
+    inactivedChatStates.push(chatStates);
+};
+
+const deactiveChatMenu = (chatMenu, chatStates) => {
+    chatMenu.className = chatMenu.className.replace(/\schat-menu-active/g, '');
+
+    for (const state of chatStates) {
         state.className = state.className.replace(/\schat-state-inactive/g, '');
     }
 };
@@ -19,19 +49,14 @@ for (const btn of chatPropertyButtons) {
 
     btn.addEventListener('click', () => {
         if (chatMenu.className.indexOf('chat-menu-active') !== -1) {
-            closeAllChatPropeties();
+            deactiveChatMenu(chatMenu, chatStates);
         } else {
-            chatMenu.className += ' chat-menu-active';
-            activeChatMenu = chatMenu;
-
-            for (const state of chatStates) {
-                state.className += ' chat-state-inactive';
-            }
-            inactiveChatStates = chatStates;
+            deactiveAllChatMenus();
+            activeChatMenu(chatMenu, chatStates);
         }
     });
 }
 
 document.body.addEventListener('click', () => {
-    closeAllChatPropeties();
+    deactiveAllChatMenus();
 });

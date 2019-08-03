@@ -6,7 +6,7 @@ const closeAllPopoverBodies = () => {
     }
 };
 
-const togglePopoverBody = (event, popoverBodyId) => {
+const togglePopoverBody = popoverBodyId => {
     const popoverBody = document.getElementById(popoverBodyId);
 
     if (popoverBody) {
@@ -14,13 +14,12 @@ const togglePopoverBody = (event, popoverBodyId) => {
             !popoverBody.style.display ||
             popoverBody.style.display === 'none'
         ) {
+            closeAllPopoverBodies();
             popoverBody.style.display = 'block';
         } else {
             popoverBody.style.display = 'none';
         }
     }
-
-    event.stopPropagation();
 };
 
 const createPopoverTriangle = (popover, popoverBodyId, triangleClassName) => {
@@ -43,10 +42,10 @@ for (const popover of popovers) {
     const popoverBody = document.getElementById(popoverBodyId);
 
     if (popoverBody) {
-        popover.addEventListener('click', e =>
-            togglePopoverBody(e, popoverBodyId)
-        );
-        popoverBody.addEventListener('click', e => e.stopPropagation());
+        popover.addEventListener('click', e => {
+            e.stopPropagation();
+            togglePopoverBody(popoverBodyId);
+        });
 
         createPopoverTriangle(popover, popoverBodyId, 'popover-triangle');
         createPopoverTriangle(
