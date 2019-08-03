@@ -33,9 +33,7 @@ const createPopoverTriangle = (popover, popoverBodyId, triangleClassName) => {
         popoverTriangle.setAttribute('class', triangleClassName);
         popoverBody.appendChild(popoverTriangle);
 
-
-        popoverTriangle.style.left =
-            popover.offsetWidth / 2 - 8;
+        popoverTriangle.style.left = popover.offsetWidth / 2 - 8;
     }
 };
 
@@ -59,6 +57,4 @@ for (const popover of popovers) {
     }
 }
 
-document
-    .getElementsByTagName('body')[0]
-    .addEventListener('click', closeAllPopoverBodies);
+document.body.addEventListener('click', closeAllPopoverBodies);
