@@ -1,6 +1,15 @@
-/* .chats-finder {
+.chats-finder::-webkit-scrollbar {
+    display: none;
+}
+
+.chats-finder:hover::-webkit-scrollbar {
+    display: block;
+}
+
+.chats-finder {
     overflow-y: overlay;
-} */
+    overflow-x: hidden;
+}
 
 /* SEARCH BOX */
 .chats-finder .search-box {
