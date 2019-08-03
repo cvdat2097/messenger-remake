@@ -97,10 +97,11 @@ li.menu-item {
 
 li.menu-item:hover {
     background: gray;
+    color: white;
 }
 
-li.menu-item:hover a {
-    color: white;
+li.menu-item:hover * {
+    color: white !important;
 }
 
 li.menu-separator {
