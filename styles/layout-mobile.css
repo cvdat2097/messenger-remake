@@ -1,4 +1,12 @@
 @media screen and (max-width: 600px) {
+    .chats-header .banner {
+        display: none !important;
+    }
+
+    .chats-header #account-settings-button {
+        display: none !important;
+    }
+
     .chats-container {
         width: 80px !important;
         min-width: initial !important;
@@ -6,5 +14,11 @@
 
     .chats {
         overflow-x: hidden;
+    }
+
+    .chat-container .chat-summary,
+    .chat-container .chat-property,
+    .search-box {
+        display: none !important;
     }
 }
