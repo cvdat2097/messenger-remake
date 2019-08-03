@@ -6,3 +6,4 @@ const importModule = filePath => {
 };
 
 importModule('./js/chats/search-box.js');
+importModule('./js/chats/chat-menu.js');

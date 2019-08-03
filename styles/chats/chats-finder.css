@@ -1,6 +1,6 @@
-.chats-finder {
+/* .chats-finder {
     overflow-y: overlay;
-}
+} */
 
 /* SEARCH BOX */
 .chats-finder .search-box {
@@ -172,6 +172,10 @@
     position: absolute;
 }
 
+.chat-property .chat-state-inactive {
+    display: none !important;
+}
+
 .chat-property .chat-muted {
     background: url(../../assets/img/icons.png);
     background-size: 170px 2287px;
@@ -188,6 +192,14 @@
 
 .chat-property .chat-menu {
     display: none;
+}
+
+.chat-property .chat-menu-active {
+    display: block !important;
+}
+
+.chat-property .popover-body {
+    text-align: left;
 }
 
 .chat-menu i {
