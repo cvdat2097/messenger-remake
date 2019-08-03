@@ -79,6 +79,19 @@
     background-position: -72px -1858px;
 }
 
+.search-box #search-message-button #search-keyword-container {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#search-keyword-container::before {
+    content: '"';
+}
+
+#search-keyword-container::after {
+    content: '"';
+}
+
 /* CHAT LIST */
 
 .chats .chat-link {

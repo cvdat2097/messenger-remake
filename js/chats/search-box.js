@@ -14,7 +14,7 @@ const showSearchMessagesButton = () => {
         'search-message-button'
     );
 
-    searchMessagesButton.style.display = 'block';
+    searchMessagesButton.style.display = 'flex';
 };
 
 const hideSearchMessagesButton = () => {
@@ -29,15 +29,9 @@ const changeSearchMessageKeyword = newKeyword => {
     const messageKeywordContainer = document.getElementById(
         'search-keyword-container'
     );
-    let trimedKeyword = newKeyword;
-    const MAX_KEYWORD_LENGTH = 8;
-
-    if (newKeyword.length > MAX_KEYWORD_LENGTH) {
-        trimedKeyword = newKeyword.substring(0, MAX_KEYWORD_LENGTH - 1) + '...';
-    }
 
     if (messageKeywordContainer) {
-        messageKeywordContainer.innerHTML = `"${trimedKeyword}"`;
+        messageKeywordContainer.innerHTML = newKeyword;
     }
 };
 
