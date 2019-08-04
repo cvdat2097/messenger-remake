@@ -45,7 +45,6 @@
 }
 
 .messenger-container {
-    border: 2px solid orange;
     box-sizing: border-box;
     /* Create Block Formating Context */
     overflow: auto;
@@ -54,7 +53,6 @@
 }
 
 .messenger-header-container {
-    border: 2px solid blue;
     box-sizing: border-box;
     height: 60px;
 }
