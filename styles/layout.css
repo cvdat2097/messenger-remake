@@ -8,7 +8,6 @@
 }
 
 .chats-container {
-    border: 2px solid green;
     height: 100%;
     box-sizing: border-box;
     float: left;
@@ -16,27 +15,25 @@
     min-width: 285px;
     max-width: 360px;
     width: 30%;
+
+    border-right: 1px solid #e1e1e1;
 }
 
-.chats-header {
-    border: 2px solid royalblue;
+#chats-header {
     height: 60px;
     box-sizing: border-box;
 }
 
-.chats-finder {
-    border: 2px solid indianred;
+#chats-finder {
     height: calc(100% - 60px);
     box-sizing: border-box;
 }
 
 .search-box {
-    border: 2px solid lawngreen;
     box-sizing: border-box;
 }
 
 .chats {
-    border: 2px solid navy;
     box-sizing: border-box;
     display: block;
 }

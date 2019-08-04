@@ -1,9 +1,9 @@
 @media screen and (max-width: 600px) {
-    .chats-header .banner {
+    #chats-header .banner {
         display: none !important;
     }
 
-    .chats-header #account-settings-button {
+    #chats-header #account-settings-button {
         display: none !important;
     }
 
