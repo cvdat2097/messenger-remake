@@ -20,6 +20,9 @@ body {
 /* BUTTONS */
 
 .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     text-align: center;
     background-color: whitesmoke;

@@ -1,0 +1,48 @@
+.messenger-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 0 15px;
+}
+
+.recipient-container {
+    display: flex;
+    align-items: center;
+}
+
+.recipient-container .recipient-avatar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.recipient-container .recipient-avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.recipient-container .recipient-name {
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.messenger-actions {
+    display: inline-block;
+}
+
+.messenger-actions .btn {
+    margin: 0 5px;
+    width: 34px;
+    height: 34px;
+    color: #005fff;
+    background: transparent;
+}
+
+.messenger-actions .btn * {
+    font-size: 1.7em;
+}
+
+.messenger-actions .btn.active {
+    background-color: #ccdfff;
+}
