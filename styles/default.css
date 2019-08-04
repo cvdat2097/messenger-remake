@@ -150,3 +150,12 @@ li.menu-separator {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+/* DROPDOWN */
+.dropdown-menu .dropdown-items {
+    display: none;
+}
+
+.dropdown-menu .dropdown-items.showed {
+    display: block;
+}

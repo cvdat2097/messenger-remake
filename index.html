@@ -1074,7 +1074,7 @@
                     </div>
                 </div>
 
-                <div id="messenger-menu">
+                <div id="messenger-menu" class="messenger-menu-opened">
                     <div class="conversation-info">
                         <div class="conversation-avatar">
                             <img
@@ -1087,14 +1087,18 @@
                         </div>
                     </div>
 
-                    <div class="dropdown-menu">
-                        DROPDOWN-MENU
+                    <div class="messenger-dropdown-menu dropdown-menu">
                         <div class="dropdown-toggle">
-                            TOGGLE
+                            OPTIONS
                         </div>
 
                         <div class="dropdown-items">
-                            DROPDOWN ITEMS
+                            <div class="dropdown-item">
+                                Search in Conversation
+                            </div>
+                            <div class="dropdown-item">
+                                Edit Nicknames
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1111,8 +1115,9 @@
         </div>
 
         <!-- JS SCRIPTS -->
-        <script src="./js/popover.js"></script>
         <script src="./js/dom-helper.js"></script>
+        <script src="./js/popover.js"></script>
+        <script src="./js/dropdown.js"></script>
         <script src="./js/main.js"></script>
     </body>
 </html>

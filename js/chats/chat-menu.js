@@ -42,7 +42,7 @@ for (const btn of chatPropertyButtons) {
     const chatStates = btn.getElementsByClassName('chat-state');
 
     btn.addEventListener('click', () => {
-        if (chatMenu.className.indexOf('chat-menu-active') !== -1) {
+        if (hasClass(chatMenu, 'chat-menu-active')) {
             deactiveChatMenu(chatMenu, chatStates);
         } else {
             deactiveAllChatMenus();

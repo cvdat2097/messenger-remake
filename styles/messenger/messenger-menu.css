@@ -4,9 +4,10 @@
 }
 
 #messenger-menu.messenger-menu-opened {
-    display: block; 
+    display: block;
 }
 
+/* CONVERSATION INFO */
 .conversation-info {
     display: flex;
     flex-direction: column;
@@ -40,3 +41,5 @@
 .conversation-info .conversation-name a:hover {
     text-decoration: underline;
 }
+
+/* DROPDOWN MENUS */

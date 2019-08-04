@@ -8,3 +8,7 @@ const removeClassFromElement = (element, classname) => {
         ''
     );
 };
+
+const hasClass = (element, classname) => {
+    return element.className.indexOf(classname) !== -1;
+};
