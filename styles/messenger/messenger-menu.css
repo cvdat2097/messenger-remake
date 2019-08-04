@@ -48,7 +48,7 @@
     border-top: 1px solid #e1e1e1;
 
     color: rgba(0, 0, 0, 0.34);
-    font-size: 0.85em;
+    font-size: 0.8em;
     font-weight: bold;
     text-transform: uppercase;
     user-select: none;
@@ -88,7 +88,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 0.9em;
-    color: #B3B3A9;
+    color: #b3b3a9;
 }
 
 .dropdown-item .menu-icon {
@@ -106,4 +106,43 @@
 
 .dropdown-item .menu-icon i {
     font-size: 1.3em;
+}
+
+.dropdown-item.controller-item {
+    justify-content: center;
+    height: 30px;
+}
+
+.dropdown-item .shared-file-link {
+    display: block;
+    text-decoration: none;
+    color: rgb(240, 29, 106);
+}
+
+.shared-file-link::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    vertical-align: middle;
+    background-image: url(../../assets/img/filetypes.png);
+}
+
+.filetype-word::before {
+    background-repeat: no-repeat;
+    background-size: 122px 352px;
+    background-position: -90px -290px;
+}
+
+.filetype-pdf::before {
+    background-repeat: no-repeat;
+    background-size: 122px 352px;
+    background-position: -54px -272px;
+}
+
+.filetype-other::before {
+    background-repeat: no-repeat;
+    background-size: 122px 352px;
+    background-position: -18px -272px;
 }
