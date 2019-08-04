@@ -156,6 +156,23 @@ li.menu-separator {
     display: none;
 }
 
-.dropdown-menu .dropdown-items.showed {
+.dropdown-menu.showed .dropdown-items {
     display: block;
+}
+
+.messenger-dropdown-menu .dropdown-toggle {
+    position: relative;
+}
+
+.messenger-dropdown-menu .dropdown-toggle .toggler-arrow {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 18px;
+    top: 9px;
+}
+
+.dropdown-toggle .toggler-arrow i {
+    font-size: 2.3em;
 }
