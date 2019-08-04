@@ -43,3 +43,67 @@
 }
 
 /* DROPDOWN MENUS */
+.messenger-dropdown-menu .dropdown-toggle {
+    padding: 15px 10px;
+    border-top: 1px solid #e1e1e1;
+
+    color: rgba(0, 0, 0, 0.34);
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.messenger-dropdown-menu .dropdown-toggle:hover {
+    background-color: rgba(220, 220, 220, 0.363);
+    cursor: pointer;
+}
+
+.messenger-dropdown-menu .dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    padding: 0 10px;
+    margin: 0 1px;
+
+    font-size: 0.9em;
+    user-select: none;
+    cursor: pointer;
+}
+
+.messenger-dropdown-menu .dropdown-item:active {
+    outline: 2px solid #78beff;
+}
+
+.dropdown-item .menu-caption-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.dropdown-item .menu-sub-caption {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9em;
+    color: #B3B3A9;
+}
+
+.dropdown-item .menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.dropdown-item .menu-icon i {
+    font-size: 1.3em;
+}
