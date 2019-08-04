@@ -58,7 +58,6 @@
 }
 
 .menu-container {
-    border: 2px solid greenyellow;
     box-sizing: border-box;
 
     float: right;
@@ -86,7 +85,6 @@
 }
 
 .conversation-container {
-    border: 2px solid plum;
     box-sizing: border-box;
 
     /* Create Block Formating Context */
