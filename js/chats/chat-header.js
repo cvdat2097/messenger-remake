@@ -6,14 +6,11 @@ let shadowHidden = true;
 chatsFinder.addEventListener('scroll', e => {
     if (e.srcElement.scrollTop !== 0) {
         if (shadowHidden) {
-            chatsHeader.className = chatsHeader.className.replace(
-                /hide-shadow/g,
-                ''
-            );
+            removeClassFromElement(chatsHeader, 'hide-shadow');
             shadowHidden = false;
         }
     } else {
-        chatsHeader.className = chatsHeader.className + ' hide-shadow';
+        addClassToElement(chatsHeader, 'hide-shadow');
         shadowHidden = true;
     }
 });

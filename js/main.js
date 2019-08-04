@@ -8,3 +8,4 @@ const importModule = filePath => {
 importModule('./js/chats/search-box.js');
 importModule('./js/chats/chat-menu.js');
 importModule('./js/chats/chat-header.js');
+importModule('./js/messenger/messenger-menu.js');

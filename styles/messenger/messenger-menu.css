@@ -1,5 +1,10 @@
-.menu-container {
+#messenger-menu {
+    display: none;
     border-left: 1px solid #e1e1e1;
+}
+
+#messenger-menu.messenger-menu-opened {
+    display: block; 
 }
 
 .conversation-info {

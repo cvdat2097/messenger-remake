@@ -4,18 +4,12 @@ let inactivedChatStates = [];
 const deactiveAllChatMenus = () => {
     if (activedChatMenu.length && inactivedChatStates.length) {
         activedChatMenu.forEach(chatMenu => {
-            chatMenu.className = chatMenu.className.replace(
-                /\schat-menu-active/g,
-                ''
-            );
+            removeClassFromElement(chatMenu, 'chat-menu-active');
         });
 
         inactivedChatStates.forEach(inactivedChatState => {
             for (const state of inactivedChatState) {
-                state.className = state.className.replace(
-                    /\schat-state-inactive/g,
-                    ''
-                );
+                removeClassFromElement(state, 'chat-state-inactive');
             }
         });
 
@@ -25,20 +19,20 @@ const deactiveAllChatMenus = () => {
 };
 
 const activeChatMenu = (chatMenu, chatStates) => {
-    chatMenu.className += ' chat-menu-active';
+    addClassToElement(chatMenu, 'chat-menu-active');
     activedChatMenu.push(chatMenu);
 
     for (const state of chatStates) {
-        state.className += ' chat-state-inactive';
+        addClassToElement(state, 'chat-state-inactive');
     }
     inactivedChatStates.push(chatStates);
 };
 
 const deactiveChatMenu = (chatMenu, chatStates) => {
-    chatMenu.className = chatMenu.className.replace(/\schat-menu-active/g, '');
+    removeClassFromElement(chatMenu, 'chat-menu-active');
 
     for (const state of chatStates) {
-        state.className = state.className.replace(/\schat-state-inactive/g, '');
+        removeClassFromElement(state, 'chat-state-inactive');
     }
 };
 
