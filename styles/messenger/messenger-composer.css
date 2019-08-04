@@ -1,0 +1,42 @@
+/* HELPER */
+.composer-btn {
+    background: transparent;
+    color: #005fff;
+}
+.composer-btn i {
+    font-size: 1.7em;
+}
+
+/* MESSENGER COMPOSER */
+.messenger-composer {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.messenger-composer .input-types {
+    display: flex;
+    align-items: center;
+}
+
+.input-types .input-type {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+}
+
+.messenger-composer .input-wrapper {
+    position: relative;
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.messenger-composer .input-wrapper .emoji-button {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.messenger-composer .input-wrapper .text-input {
+    padding-right: 40px;
+}

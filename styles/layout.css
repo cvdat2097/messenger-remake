@@ -76,8 +76,7 @@
     height: calc(100% - 60px - 52px);
 }
 
-.messager-input {
-    border: 2px solid red;
+.messenger-composer {
     box-sizing: border-box;
     height: 52px;
 
