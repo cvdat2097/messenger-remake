@@ -4,7 +4,7 @@ const addClassToElement = (element, classname) => {
 
 const removeClassFromElement = (element, classname) => {
     element.className = element.className.replace(
-        new RegExp(` ${classname}`, 'g'),
+        new RegExp(`${classname}`, 'g'),
         ''
     );
 };
