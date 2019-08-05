@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 765px) {
     #chats-header .banner {
         display: none !important;
     }
@@ -20,5 +20,22 @@
     .chat-container .chat-property,
     .search-box {
         display: none !important;
+    }
+
+    .messenger-composer #input-media {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        visibility: hidden;
+        transform: translateY(0);
+
+        background: #fafafa;
+    }
+
+    .messenger-composer #input-media.expanded {
+        visibility: visible;
+        transform: translateY(-100%);
+        width: auto !important;
     }
 }
