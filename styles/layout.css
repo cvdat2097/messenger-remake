@@ -79,7 +79,4 @@
 .messenger-composer {
     box-sizing: border-box;
     height: 52px;
-
-    /* Create Block Formating Context */
-    overflow: auto;
 }

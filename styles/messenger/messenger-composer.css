@@ -12,14 +12,35 @@
     display: flex;
     align-items: center;
     padding: 0 15px;
+    position: relative;
 }
 
-.messenger-composer .input-types {
+.messenger-composer #expand-media-button {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    background: white;
+    z-index: 3;
+}
+
+.messenger-composer #expand-media-button.expanded {
+    color: gray;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.messenger-composer #input-media {
     display: flex;
-    align-items: center;
+    overflow: hidden;
+    width: 0px;
+    transition: all 0.3s cubic-bezier(.5, 0, .4, 1);
+    -webkit-transition: all 0.3s cubic-bezier(.5, 0, .4, 1);
 }
 
-.input-types .input-type {
+.messenger-composer #input-media.expanded {
+    width: 216px;
+}
+
+#input-media .input-medium {
     flex: 0 0 36px;
     width: 36px;
     height: 36px;
