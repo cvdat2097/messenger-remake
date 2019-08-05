@@ -10,3 +10,4 @@ importModule('./js/chats/chat-menu.js');
 importModule('./js/chats/chat-header.js');
 importModule('./js/messenger/messenger-menu.js');
 importModule('./js/messenger/messenger-composer.js');
+importModule('./js/messenger/messenger-conversation.js');

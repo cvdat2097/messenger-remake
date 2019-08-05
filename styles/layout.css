@@ -68,7 +68,7 @@
     overflow-y: overlay;
 }
 
-.conversation-container {
+#conversation-container {
     box-sizing: border-box;
 
     /* Create Block Formating Context */

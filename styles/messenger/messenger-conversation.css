@@ -1,0 +1,121 @@
+#conversation-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.message-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.message-container.message-sender {
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.message-container .recipient-avatar {
+    width: 28px;
+    height: 28px;
+    margin-left: 10px;
+    flex: 0 0 28px;
+
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.message-container .recipient-avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.message-container .message-group {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.message-container .message {
+    display: flex;
+    align-items: center;
+}
+
+.message-sender .message {
+    flex-direction: row-reverse;
+}
+
+.message-container .message img {
+    max-width: 250px;
+}
+
+.message .message-content {
+    padding: 5px 15px;
+    margin-top: 2px;
+    max-width: 60%;
+
+    overflow: hidden;
+    background: #f1f0f0;
+}
+
+.message-container .message.img-message .message-content {
+    padding: 0;
+    cursor: pointer;
+}
+
+/* RECIPIENT MESSAGE */
+.message-container.message-recipient .message-content {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.message-container.message-recipient .message:first-child .message-content {
+    border-top-left-radius: 15px;
+}
+.message-container.message-recipient .message:last-child .message-content {
+    border-bottom-left-radius: 15px;
+}
+
+/* SENDER MESSAGE */
+.message-container.message-sender .message-content {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background: #0099ff;
+    color: white;
+}
+
+.message-container.message-sender .message:first-child .message-content {
+    border-top-right-radius: 15px;
+}
+.message-container.message-sender .message:last-child .message-content {
+    border-bottom-right-radius: 15px;
+}
+
+.message .message-actions {
+    display: flex;
+    align-items: center;
+}
+
+.message-sender .message .message-actions {
+    flex-direction: row-reverse;
+}
+
+.message-actions .secondary-action {
+    background: transparent;
+    display: none;
+}
+
+.message-action {
+    margin: 2px;
+}
+
+.message:hover .message-action {
+    display: block;
+}
