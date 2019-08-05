@@ -96,6 +96,7 @@ ul.menu {
 
 li.menu-item {
     padding: 3px 20px;
+    user-select: none;
 }
 
 li.menu-item:hover {
